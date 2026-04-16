@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;500;600;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-bg: #0A0B0E;
+  --color-surface: #16181D;
+  --color-accent: #00D1FF;
+  --color-accent-glow: rgba(0, 209, 255, 0.3);
+  --color-text-main: #E0E0E0;
+  --color-text-dim: #888C94;
+  --color-glass: rgba(255, 255, 255, 0.05);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-fire: #FF5C00;
+  
+  --font-sans: 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Helvetica Neue', Arial, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  font-family: var(--font-sans);
+}
+
+.glass-panel {
+  background: var(--color-glass);
+  border: 1px solid var(--color-border);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.surface-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
